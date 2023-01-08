@@ -5,7 +5,5 @@ function sumWithArgument(arr) {
         sum += args[i];
         
     }
-    return sum
 }
 let result = sumWithArgument(1,2,3,4,5,6,7,8);
-console.log(result); // 38
