@@ -1,9 +1,9 @@
-
-function compareArray(arr1, arr2) {
-    return arr1.length === arr2.length && arr1.every((item, key) => item == arr2[key]);
-}
-
-
-let arr1 = [1, 3, 5, 7];
-let arr2 = [1, 4, 5, 7];
-console.log(compareArray(arr1, arr2));
+var frequencySort = function(nums) {
+    let freqObj = {};
+    for(let i =0; i<nums.length; i++){
+        freqObj[nums[i]] = (freqObj[nums[i]] || 0) +1;
+    }
+    let result = nums.sort((a,b) => freqObj[a] === freqObj[b] ? b - a : freqObj[a] - freqObj[b])
+    return result
+};
+console.log(frequencySort([2,3,1,3,2]));
