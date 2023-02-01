@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .black{
+        width: 100px;
+        height: 100px;
+        color:rgb(224, 41, 41)
+    }
+    .file{
+        width: 100px;
+        height: 100px;
+        color:salmon
+    }
+    .black{
+        width: 100px;
+        height: 100px;
+        color:black
+    }
+</style>
+<body>
+    <div class="folder"></div>
+    <div class="file"></div>
+    <script>
+        const array = [{
+    name: 'file 1'
+  }, {
+    name: 'file 2'
+  }, {
+    name: 'folder 1',
+    children: [{
+      name: 'file 1'
+    }, {
+      name: 'file 2'
+    }, {
+      name: 'folder 1',
+      children:[{
+        name: 'file 1'
+      }]
+    }]
+  }]
+
+    </script>
+</body>
+</html>
