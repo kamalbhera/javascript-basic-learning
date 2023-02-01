@@ -1,10 +1,15 @@
+// Question: https://www.hackerrank.com/challenges/js10-class/problem?isFullScreen=true
 
-class User {
-    constructor(name, email, phone){
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
-    }
+Solution:
+class Polygon {
+     constructor(arr) {
+         this.arr = arr;
+     }
+     perimeter(){
+          let peri = 0;
+          for (var i=0; i< this.arr.length; i++){
+            peri += this.arr[i];
+          }
+         return peri;
+     }   
 }
-let user = new User('kamal', 'kamal@gnail.com',7687687567)
-console.log(user);

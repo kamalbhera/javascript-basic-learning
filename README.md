@@ -1,22 +1,6 @@
-## Javascript Awesome Method and Basic point to help interview
+# HackerRankCodePractices-JS🤗🚀 
 
-A Theme for admin panel.
+It is repository of all code challenges on JavaScript given by HackerRank (```10 Days of Javascript```).
+```Just one of the best way to brush up and get into basics of JavaScript fundamental.```
+![hackerLogo](https://user-images.githubusercontent.com/71059909/156772207-e7fb3faa-0570-4b57-a14f-62bb7db94c7e.JPG)
 
-## License
-
-This source code is licensed under the MIT license.
-
-## Author
-
-<table>
-  <tr>
-    <td>
-      <img src="https://avatars.githubusercontent.com/u/65757787?v=4" width="100">
-    </td>
-    <td>
-      CS Kamal Bhera<br />
-      <a href="mailto:kamalbhera96@gmail.com">kamalbhera96@gmail.com</a><br />
-      Instagram : <a href="https://www.instagram.com/cskamalbhera/">cskamalbhera</a>
-    </td>
-  </tr>
-</table>
