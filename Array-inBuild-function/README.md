@@ -1,48 +1,121 @@
-# JS--inBuild-function
+## 02 Arrays
 
-# Adding the value to the array
-var a = [1,2,3,4,5]
-a.push(6) = [1,2,3,4,5,6] // add in the last place
+### 02.01 Array and Traversal in array [Easy]
 
-a.unshift(6) = [6,1,2,3,4,5] // add in the first place
+- JS has Array class and arrays are a prototype of this
+- Looping array
+  - `for()` loop
+  - ES6:
+    - `for key in arr` and
+    - `for val of arr`: faster and recommended
+    - `arr.forEach()`: **Important**! can not break the loop while other loops can be broken
 
-var b = ["mango",'orange','lemon','apple']
-b.splice(1,0,'grapes) - ["mango",'grapes','orange','lemon','apple']
+### 02.02 Add, Remove, Insert, Replace elements in array [Medium]
 
- ## Removing the element
- a.pop() - removes the last element of the array
- 
- a.shift() - removes the first element of the array
- 
- [1,2,3,4,5]
- a.splice(2,3) => [1,2] - it delete from 2 index with the respective count(3)
- 
-# In splice 1st one indicate starting index of the array. 2nd - deleting element count. 3rd - adding value in the deleted element
+- Methods: `push()`, `pop()`, `shift()`, `unshift()`
+  - Add items:
+    - push(): add items at end and returns length
+    - unshift(): add items at beginning, returns length
+  - Remove items:
+    - pop(): remove last item, returns removed element
+    - shift(): remove first item, returns removed element
+- `splice()`: `splice(startIdx)`: delete starting from idx - returns deleted items in array
+  - can be used to add, remove, insert, replace modifying the technique
+- All these methods mutate the original array
+- Qns:
+  1. What is the difference between push() and unshift() method ?
+  2. What is the difference between pop() and shift() ?
+  3. How can you insert an element at a given position ?
+  - `arr.splice(2, 0, "New"))` will insert "New" at index 2 and delete 0 items
+  4. How can you remove a specific element ?
+  - `arr.splice(2, 1))`
+  5. What does splice() return ?
+  - removed array
+  6.  If there is not element removed then what will splice() method return ?
+  ```
+  let arr=["One","Two","Three","Four","Five"];
+  console.log(arr.splice(2,0,"New")); // will return []
+  ```
 
-example:1
-let a = [1,2,3,4,5,6];
-a.splice(2,2,1.5);
-console.log(a);
-output:
-[1,2,1.5,5,6]  // 2nd index- 3 and 3rd index are delted and 1.5 is added.
+### 02.03 Search in Array [Medium]
 
-2.eg:
-let a = [1,2,3,4,5,6];
-a.splice(1);     // it delete after all the index element from mentioned in the splice.
-console.log(a); => [1]
+- Methods: `indexOf()`, `lastIndexOf()`, `includes()`
+  - indexOf: `arr.indexOf(searchElem, startIndex)`
+    - returns index where search items is found. -1 if not found
+    - returns index of first element if multiple items found
+  - lastIndexOf:
+    - same but returns index of last elem if multiple items found
+  - includes:
+    - sasme but returns true or false
+- Advanced methods: `find()`, `findIndex()`, `filter()`
+  - find(): returns item which matches the callback condition: only returns first match
+  - filter(): returns array of items that matches the condition
+- Qns:
 
-# SLICE:
-The slice() method returns selected elements in an array, as a new array.
+1. What is the difference between find() and filter() method ?
 
-slice() selects the elements starting at the given start argument, and ends at, but does not include the given end argument.
+- find returns item while filter returns array of all items
 
-array.slice(start,end-1)
+2. If there is no value to return, what will findIndex() return ?
 
-const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
- fruits.slice(1, 3); => ["Orange","lemon"]
-                  -5          -4      -3      -2     -1
-var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-var myBest = fruits.slice(-3, -1); => ["Lemon","Apple]
+- undefined
 
-let arr = [1,2,3,4,5]
-arr.slice(1) => [2,3,4,5] It will remove only first element
+3. What is the difference between indexOf() and includes() method ?
+
+- returns index, returns boolean
+
+4. How will you search multiple values in an array ?
+
+- filter
+
+5. What will be the output of this code ?
+   ```
+   let arr=["One","Two","Three","Four","Five"];
+    console.log(arr.lastIndexOf("Abcd")); // -1
+   ```
+
+### 02.04 map method [Easy]
+
+- returns new array after modifying each item in array
+
+### 02.05 Flatten 2D array - reduce [Medium]
+
+- flattening is converting 2D, 3D array to 1D
+  - `const flatArr = twoDimArr.reduce((acc, item) => acc.concat(item));`
+- `reduce()`
+- `reduceRight()`:
+  - loops from right to left
+- Qn:
+  - What is the difference between reduce() and reduceRight() ?
+
+### 02.06 Sort array [Easy]
+
+- `arr.sort()`: sorts alphabetically assign arr is of strings
+  - modifies the original array
+  - use comparison callback fn to sort descending order
+    - return -1, 1 or 0
+- Numeric sort: use comparison method
+  - if no cb fn given then it will sort the unicode string value
+- Qn:
+  1. What will be the output in case an array has `undefined` while sorting the values ?
+  - all undefined values are moved to the end
+  2. How will sort an object literal ?
+  - using comparison fn
+  3. How will you sort a numeric array ?
+  4. Sort all values of array in descending order.
+
+### 02.07 Destructuring array [Medium]
+
+- getting values from arr or obj into individual variables
+- Qns:
+  1. What is the destructuring assignment ?
+  - `let [a3, b3, c3 = 5] = arr1;`
+  2. Swap values using destructuring.
+  - `[a1, b1] = [b1, a1];`
+  3. What will be the output of this code ?
+  -
+  ```
+    let [a,b,c] = [5,,7];
+    console.log(a,b,c); // undefined
+  ```
+  4. How will you set a default value while destructuring an array?
